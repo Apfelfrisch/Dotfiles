@@ -1,0 +1,17 @@
+#!/bin/bash
+
+DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+# Fonts
+rm -rf $HOME/.local/share/fonts
+ln -s $DOTFILES/fonts $HOME/.local/share/fonts
+
+# Git
+rm -rf $HOME/.config/git
+ln -s $DOTFILES/git $HOME/.config/git
+
+# Neovim
+# sudo snap install nvim --clasic
+# sudo apt install ripgrep
+rm -rf $HOME/.config/nvim
+ln -s $DOTFILES/nvim $HOME/.config/nvim

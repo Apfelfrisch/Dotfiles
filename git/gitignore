@@ -1,0 +1,4 @@
+.vimspector.json
+.vim
+.laradock
+*.swp
