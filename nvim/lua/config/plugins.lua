@@ -73,6 +73,9 @@ require("lazy").setup({
   -- Syntax for Blade files
   { import = 'config.plugins.vim-blade' },
 
+  -- Automatically fix indentation when pasting code.
+  { import = 'config.plugins.vim-pasta' },
+
   -- Display indentation lines.
   -- { import = 'config.plugins.indent-blankline' },
 
@@ -99,9 +102,6 @@ require("lazy").setup({
 
   -- Split arrays and methods onto multiple lines, or join them back up.
   -- { import = 'config.plugins.splitjoin' },
-
-  -- Automatically fix indentation when pasting code.
-  -- { import = 'config.plugins.vim-pasta' },
 
   -- Allow plugins to enable repeating of commands.
   -- { 'tpope/vim-repeat' },

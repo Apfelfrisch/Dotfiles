@@ -23,7 +23,8 @@ return {
           git = {
             unstaged = "◌",
             untracked = "󰐕",
-            ignored = "󱙄",
+            -- ignored = "󱙄",
+            ignored = "",
           },
         },
       },

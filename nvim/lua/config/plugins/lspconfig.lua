@@ -1,6 +1,7 @@
 return {
   'neovim/nvim-lspconfig',
   dependencies = {
+    'nvim-telescope/telescope.nvim',
     'williamboman/mason.nvim', --Packet Manager for externals
     'williamboman/mason-lspconfig.nvim', -- Mason Plugin for lspconfig with LSP-Server
     'b0o/schemastore.nvim', --Schemastore Plugin for lspconfig (Json)
