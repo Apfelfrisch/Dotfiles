@@ -76,6 +76,9 @@ require("lazy").setup({
   -- Automatically fix indentation when pasting code.
   { import = 'config.plugins.vim-pasta' },
 
+  -- Enable * searching with visually selected text.
+  { 'nelstrom/vim-visual-star-search' },
+
   -- Display indentation lines.
   -- { import = 'config.plugins.indent-blankline' },
 
@@ -111,9 +114,6 @@ require("lazy").setup({
 
   -- Jump to the last location when opening a file.
   -- { 'farmergreg/vim-lastplace' },
-
-  -- Enable * searching with visually selected text.
-  -- { 'nelstrom/vim-visual-star-search' },
 
   -- Automatically create parent dirs when saving.
   -- { 'jessarcher/vim-heritage' },

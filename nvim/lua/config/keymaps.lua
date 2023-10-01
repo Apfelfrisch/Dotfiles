@@ -2,10 +2,11 @@
 vim.g.mapleader = ','
 vim.g.maplocalleader = ','
 
--- Quickly clear search highlighting.
+-- Clear search highlighting.
 vim.keymap.set('n', '<CR>', ':nohlsearch<CR><CR>')
 
-vim.keymap.set('n', '<CR>', ':nohlsearch<CR><CR>')
+-- Dont Jump on * search
+vim.keymap.set('n', '*', [[:let @/= '\<' . expand('<cword>') . '\>' <bar> set hls <cr>]])
 
 -- When text is wrapped, move by terminal rows, not lines, unless a count is provided.
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true })
