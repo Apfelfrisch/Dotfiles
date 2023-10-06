@@ -1,0 +1,35 @@
+snippet pubf "Public Method"
+	public function ${1:name}(): void
+	{
+	}
+snippet prif "Privat Method"
+	private function ${1:name}(): void
+	{
+	}
+snippet pro "Protected Method"
+	protected function ${1:name}(): void
+	{
+	}
+snippet pubt "Public test function"
+	/** @test */
+	public function ${1:test_}(): void
+	{
+		$$this->assertTrue(false);
+	}
+
+snippet class "Class declaration template"
+	<?php
+
+	declare(strict_types=1);
+
+	namespace `substitute(substitute(expand("%:h"), '\v^\w+\/(\u)', '\1', ''), '\/', '\\', 'g')`;
+
+	final readonly class ${1:`vim_snippets#Filename()`}
+	{
+		$0
+	}
+
+snippet construct "__construct()"
+	public function __construct($0)
+	{
+	}

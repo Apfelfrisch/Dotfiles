@@ -11,6 +11,7 @@ vim.opt.spell = false
 vim.opt.ignorecase = false
 vim.opt.smartcase = true
 vim.opt.wrap = false
+
 vim.opt.breakindent = true -- maintain indent when wrapping indented lines
 vim.opt.linebreak = true -- wrap at word boundaries
 vim.opt.list = true -- enable the below listchars
@@ -21,7 +22,7 @@ vim.opt.splitbelow = false
 vim.opt.splitright = true
 vim.opt.scrolloff = 3
 vim.opt.sidescrolloff = 3
-vim.opt.clipboard = 'unnamedplus' -- Use Linux system clipboard / apt install wl-clipboard
+vim.opt.clipboard = 'unnamedplus' -- Use Linux system clipboard / apt install xclip
 vim.opt.confirm = true -- ask for confirmation instead of erroring
 vim.opt.undofile = true -- persistent undo
 vim.opt.backup = true -- automatically save a backup file
@@ -36,4 +37,3 @@ vim.opt.redrawtime = 10000 -- Allow more time for loading syntax on large files
 vim.opt.exrc = true
 vim.opt.secure = true
 vim.opt.titlestring = '%f // nvim'
-
