@@ -1,6 +1,6 @@
 [user]
 	name = Nils Refle
-	email = n.refle@proengeno.de
+	email = n.refle@gmail.com
 [core]
 	excludesfile = ~/.config/git/gitignore
 [push]
