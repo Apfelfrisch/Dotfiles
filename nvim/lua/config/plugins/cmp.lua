@@ -81,7 +81,6 @@ return {
       },
       mapping = {
         ["<Down>"] = cmp.mapping(function(fallback)
-          -- print('tab...')
           if cmp.visible() then
             cmp.select_next_item()
           end
@@ -92,7 +91,6 @@ return {
           end
         end, { "i", "s" }),
         ["<Tab>"] = cmp.mapping(function(fallback)
-          -- print('tab...')
           if cmp.visible() then
             cmp.select_next_item()
           elseif luasnip.expand_or_jumpable() then
@@ -103,7 +101,9 @@ return {
             fallback()
           end
         end, { "i", "s" }),
-        ['<CR>'] = cmp.mapping.confirm(),
+        ['<C-UP>'] = cmp.mapping.abort(),
+        ['<C-Down>'] = cmp.mapping.abort(),
+        ['<CR>'] = cmp.mapping.confirm({ select = true }),
       },
       sources = {
         { name = 'nvim_lsp' },
