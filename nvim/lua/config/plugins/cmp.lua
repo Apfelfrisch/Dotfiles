@@ -9,6 +9,7 @@ return {
     'L3MON4D3/LuaSnip',
     'saadparwaiz1/cmp_luasnip',
     'onsails/lspkind-nvim',
+    { 'saecki/crates.nvim', ft = {'rust', 'toml'} },
   },
   config = function()
     local cmp = require('cmp')
@@ -16,6 +17,13 @@ return {
     local lspkind = require('lspkind')
 
     require('luasnip/loaders/from_snipmate').lazy_load()
+    require('crates').setup {
+        src = {
+            cmp = {
+                enabled = true,
+            },
+        },
+    }
 
     local has_words_before = function()
       local line, col = unpack(vim.api.nvim_win_get_cursor(0))
@@ -111,7 +119,9 @@ return {
         { name = 'luasnip' },
         -- { name = 'copilot' },
         { name = 'buffer' },
+        { name = 'buffer' },
         { name = 'path' },
+        { name = 'crates' },
       },
       experimental = {
         -- ghost_text = true,

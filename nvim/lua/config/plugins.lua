@@ -22,6 +22,12 @@ require("lazy").setup({
   -- Pairs of handy bracket mappings, like [b and ]b.
   { 'tpope/vim-unimpaired' },
 
+  -- Automatically fix indentation when pasting code.
+  { import = 'config.plugins.vim-pasta' },
+
+  -- Enable * searching with visually selected text.
+  { 'nelstrom/vim-visual-star-search' },
+
   -- Indent autodetection with editorconfig support.
   { 'tpope/vim-sleuth' },
 
@@ -49,14 +55,14 @@ require("lazy").setup({
   -- All closing buffers without closing the split window.
   { import = 'config.plugins.bufexplorer' },
 
+  -- Improved syntax highlighting
+  { import = 'config.plugins.treesitter' },
+
   -- Git commands.
   { 'tpope/vim-fugitive' },
 
   -- Floating terminal.
   { import = 'config.plugins.floaterm' },
-
-  -- Improved syntax highlighting
-  { import = 'config.plugins.treesitter' },
 
   -- Language Server Protocol.
   { import = 'config.plugins.lspconfig' },
@@ -64,20 +70,20 @@ require("lazy").setup({
   -- Completion
   { import = 'config.plugins.cmp' },
 
-  -- PHP Refactoring Tools
-  { import = 'config.plugins.phpactor' },
-
   -- Testing helper
   { import = 'config.plugins.vim-test' },
+
+  -- PHP Refactoring Tools
+  { import = 'config.plugins.phpactor' },
 
   -- Syntax for Blade files
   { import = 'config.plugins.vim-blade' },
 
-  -- Automatically fix indentation when pasting code.
-  { import = 'config.plugins.vim-pasta' },
+  --  Base rust functionallity
+  { import = 'config.plugins.rust' },
 
-  -- Enable * searching with visually selected text.
-  { 'nelstrom/vim-visual-star-search' },
+  -- Better Rust tooling like Lsp-Config / debugger
+  { import = 'config.plugins.rust-tools' },
 
   -- Display indentation lines.
   -- { import = 'config.plugins.indent-blankline' },
