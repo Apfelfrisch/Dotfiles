@@ -109,8 +109,7 @@ return {
             fallback()
           end
         end, { "i", "s" }),
-        ['<C-UP>'] = cmp.mapping.abort(),
-        ['<C-Down>'] = cmp.mapping.abort(),
+        ['<S-Right>'] = cmp.mapping.abort(),
         ['<CR>'] = cmp.mapping.confirm({ select = true }),
       },
       sources = {

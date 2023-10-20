@@ -61,8 +61,8 @@ require("lazy").setup({
   -- Git commands.
   { 'tpope/vim-fugitive' },
 
-  -- Floating terminal.
-  { import = 'config.plugins.floaterm' },
+  -- Terminal Window.
+  { import = 'config.plugins.toggleterm' },
 
   -- Language Server Protocol.
   { import = 'config.plugins.lspconfig' },

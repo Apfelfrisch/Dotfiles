@@ -6,7 +6,7 @@ return {
     { '<Leader>pm', ':PhpactorContextMenu<CR>' },
     { '<Leader>cf', ':PhpactorClassNew<CR>' },
     { '<Leader>mf', ':PhpactorMoveFile<CR>' },
-    { '<Leader>em', ':<C-u>PhpactorExtractMethod<CR>' },
+    { '<Leader>em', ':\'<,\'>PhpactorExtractMethod<CR>', mode = 'v' },
     { '<Leader>nu', ':<C-u>PhpactorImportClass<CR>' },
     { '<Leader>ne', ':<C-u>PhpactorClassExpand<CR>' },
   },
