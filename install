@@ -13,5 +13,7 @@ ln -s $DOTFILES/git $HOME/.config/git
 # Neovim
 # sudo snap install nvim --clasic
 # sudo apt install ripgrep
+# sudo apt install xclip
+# sudo apt install build-essential
 rm -rf $HOME/.config/nvim
 ln -s $DOTFILES/nvim $HOME/.config/nvim
