@@ -70,6 +70,9 @@ require("lazy").setup({
   -- Completion
   { import = 'config.plugins.cmp' },
 
+  -- Debugging
+  { import = 'config.plugins.nvim-dap' },
+
   -- Testing helper
   { import = 'config.plugins.vim-test' },
 
@@ -87,9 +90,6 @@ require("lazy").setup({
 
   -- Display indentation lines.
   -- { import = 'config.plugins.indent-blankline' },
-
-  -- Add a dashboard.
-  -- { import = 'config.plugins.dashboard-nvim' },
 
   -- Git integration.
   -- { import = 'config.plugins.gitsigns' },
