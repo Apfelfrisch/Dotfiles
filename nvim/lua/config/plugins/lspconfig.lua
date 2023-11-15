@@ -7,7 +7,6 @@ return {
     'b0o/schemastore.nvim', --Schemastore Plugin for lspconfig (Json)
     { 'jose-elias-alvarez/null-ls.nvim', dependencies = 'nvim-lua/plenary.nvim' },
     'jayp0521/mason-null-ls.nvim',
-    'simrat39/rust-tools.nvim'
   },
   config = function()
     -- Setup Mason to automatically install LSP servers
