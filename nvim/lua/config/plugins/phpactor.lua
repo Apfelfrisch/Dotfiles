@@ -1,5 +1,6 @@
 return {
   'phpactor/phpactor',
+  lazy = true,
   build = 'composer install --no-dev --optimize-autoloader',
   ft = 'php',
   keys = {
