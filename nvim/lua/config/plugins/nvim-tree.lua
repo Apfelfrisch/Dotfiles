@@ -10,7 +10,7 @@ return {
       ignore = false,
     },
     view = {
-      width = 30,
+      width = 40,
     },
     renderer = {
       highlight_opened_files = 'name',
