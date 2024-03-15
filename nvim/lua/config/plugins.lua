@@ -46,10 +46,7 @@ require("lazy").setup({
   -- A Status line.
   { import = 'config.plugins.lualine' },
 
-  -- Display buffers as tabs.
-  { import = 'config.plugins.bufferline' },
-
-  -- All closing buffers without closing the split window.
+  -- All closing buffers without closing the slit window.
    { import = 'config.plugins.bufdelete' },
 
   -- All closing buffers without closing the split window.
@@ -87,6 +84,9 @@ require("lazy").setup({
 
   -- Better Rust tooling like Lsp-Config / debugger
   { import = 'config.plugins.rust-tools' },
+
+  -- Display buffers as tabs.
+  -- { import = 'config.plugins.bufferline' },
 
   -- Display indentation lines.
   -- { import = 'config.plugins.indent-blankline' },
