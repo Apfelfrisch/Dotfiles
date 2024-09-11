@@ -3,6 +3,7 @@ return {
   lazy = true,
   dependencies = {
     'rcarriga/nvim-dap-ui',
+    'nvim-neotest/nvim-nio',
     'theHamsta/nvim-dap-virtual-text',
     'nvim-telescope/telescope.nvim',
     'nvim-telescope/telescope-dap.nvim',
@@ -14,6 +15,7 @@ return {
     { '<Leader>B', function() require('dap').set_breakpoint() end },
     { '<Leader>lp', function() require('dap').set_breakpoint(nil, nil, vim.fn.input('Log point message: ')) end },
     { '<Leader>dr', function() require('dap').repl.open() end },
+    { '<Leader>dh', function() require('dap').eval() end, mode = {'n', 'v'}},
   },
   config = function()
     local dap = require('dap')
@@ -59,7 +61,7 @@ return {
     vim.keymap.set('n', '<F7>', function() dap.step_out() end)
     -- vim.keymap.set('n', '<Leader>b', function() dap.toggle_breakpoint() end)
     -- vim.keymap.set('n', '<Leader>B', function() dap.set_breakpoint() end)
-    -- vim.keymap.set('n', '<Leader>lp', function() dap.set_breakpoint(nil, nil, vim.fn.input('Log point message: ')) end)
+    vim.keymap.set('n', '<Leader>lp', function() dap.set_breakpoint(nil, nil, vim.fn.input('Log point message: ')) end)
     -- vim.keymap.set('n', '<Leader>dr', function() dap.repl.open() end)
     vim.keymap.set({'n', 'v'}, '<Leader>dh', function() dapui.eval() end)
   end

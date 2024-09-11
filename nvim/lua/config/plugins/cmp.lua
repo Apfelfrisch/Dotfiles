@@ -18,7 +18,7 @@ return {
 
     require('luasnip/loaders/from_snipmate').lazy_load()
     require('crates').setup {
-        src = {
+        completion = {
             cmp = {
                 enabled = true,
             },
