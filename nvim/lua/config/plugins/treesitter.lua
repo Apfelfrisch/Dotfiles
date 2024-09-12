@@ -1,10 +1,10 @@
 return {
   'nvim-treesitter/nvim-treesitter',
+  event = 'VeryLazy',
   build = function()
     require('nvim-treesitter.install').update({ with_sync = true })
   end,
   dependencies = {
-    'nvim-treesitter/playground',
     'JoosepAlviste/nvim-ts-context-commentstring',
     'nvim-treesitter/nvim-treesitter-textobjects',
   },
@@ -51,9 +51,6 @@ return {
       enable = true,
     },
     indent = {
-      enable = true,
-    },
-    context_commentstring = {
       enable = true,
     },
     textobjects = {
