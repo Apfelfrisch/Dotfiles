@@ -7,12 +7,13 @@ return {
     { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
   },
   keys = {
-    { '<leader>f', function() require('telescope.builtin').find_files() end },
     { '<C-p>', function() require('telescope.builtin').find_files() end },
-    { '<leader>F', function() require('telescope.builtin').find_files({ no_ignore = true, prompt_title = 'All Files' }) end },
-    { '<leader>g', function() require('telescope').extensions.live_grep_args.live_grep_args() end },
-    { '<leader>h', function() require('telescope.builtin').oldfiles() end },
-    { '<leader>s', function() require('telescope.builtin').lsp_document_symbols() end },
+    { '<leader>ff', function() require('telescope.builtin').find_files() end },
+    { '<leader>fg', function() require('telescope').extensions.live_grep_args.live_grep_args() end },
+    { '<leader>fk', function() require('telescope.builtin').keymaps() end },
+    { '<leader>fF', function() require('telescope.builtin').find_files({ no_ignore = true, prompt_title = 'All Files' }) end },
+    { '<leader>fh', function() require('telescope.builtin').oldfiles() end },
+    { '<leader>fs', function() require('telescope.builtin').lsp_document_symbols() end },
   },
   config = function ()
     local actions = require('telescope.actions')

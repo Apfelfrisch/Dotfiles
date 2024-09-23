@@ -118,7 +118,6 @@ return {
         { name = 'luasnip' },
         -- { name = 'copilot' },
         { name = 'buffer' },
-        { name = 'buffer' },
         { name = 'path' },
         { name = 'crates' },
       },
