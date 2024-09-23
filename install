@@ -2,6 +2,10 @@
 
 DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
+# Bash
+rm -rf $HOME/.bashrc
+ln -s $DOTFILES/bashrc $HOME/.bashrc
+
 # Fonts
 rm -rf $HOME/.local/share/fonts
 ln -s $DOTFILES/fonts $HOME/.local/share/fonts
