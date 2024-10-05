@@ -32,6 +32,21 @@ return {
       capabilities = capabilities
     })
 
+    -- Golang
+    require("lspconfig").gopls.setup({
+      settings = {
+        gopls = {
+          analyses = {
+            unusedparams = true,
+          },
+          gofumpt = true,
+          usePlaceholders = true,
+        },
+      },
+      capabilities = capabilities,
+      filetypes = { 'go', 'gomod', 'gowork', 'gotmpl'},
+    })
+
     -- require('lspconfig').phpactor.setup({
     --   capabilities = capabilities,
     --   on_attach = function(client, bufnr)

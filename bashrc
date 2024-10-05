@@ -165,10 +165,12 @@ alias sshfs-proengeno='sshfs forge@proengeno.pro-ebs.de:proengeno.pro-ebs.de/cur
 
 PATH=$PATH:~/.config/composer/vendor/bin
 
+# Nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 . "$HOME/.cargo/env"
-
 # Lando
 export PATH="/home/nils/.lando/bin${PATH+:$PATH}"; #landopath
+# Go
+export PATH=$PATH:/usr/local/go/bin

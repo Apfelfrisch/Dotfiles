@@ -13,11 +13,14 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+  -- Improved syntax highlighting
+  { import = 'config.plugins.treesitter' },
+
   -- Color scheme
-  { import = 'config.plugins.material' },
+  { import = 'config.plugins.colortheme' },
 
   -- Commenting support.
-  { import = 'config.plugins.vim-commentary' },
+  { 'tpope/vim-commentary' },
 
   -- Pairs of handy bracket mappings, like [b and ]b.
   { 'tpope/vim-unimpaired' },
@@ -51,9 +54,6 @@ require("lazy").setup({
 
   -- All closing buffers without closing the split window.
   { import = 'config.plugins.bufexplorer' },
-
-  -- Improved syntax highlighting
-  { import = 'config.plugins.treesitter' },
 
   -- Git commands.
   { 'tpope/vim-fugitive' },
