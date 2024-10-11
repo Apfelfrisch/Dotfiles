@@ -15,7 +15,7 @@ vim.opt.wrap = false
 vim.opt.breakindent = true -- maintain indent when wrapping indented lines
 vim.opt.linebreak = true -- wrap at word boundaries
 vim.opt.list = true -- enable the below listchars
-vim.opt.listchars = { tab = '▸ ', trail = '·' }
+vim.opt.listchars = {tab = '  ', trail = '·' }
 vim.opt.fillchars:append({ eob = ' ' }) -- remove the ~ from end of buffer
 vim.opt.mouse = 'a' -- enable mouse for all modes
 vim.opt.splitbelow = false

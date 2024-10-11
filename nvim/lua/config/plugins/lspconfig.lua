@@ -2,15 +2,9 @@ return {
   'neovim/nvim-lspconfig',
   dependencies = {
     'nvim-telescope/telescope.nvim',
-    'williamboman/mason.nvim', --Packet Manager for externals
-    'williamboman/mason-lspconfig.nvim', -- Mason Plugin for lspconfig with LSP-Server
     'b0o/schemastore.nvim', --Schemastore Plugin for lspconfig (Json)
   },
   config = function()
-    -- Setup Mason to automatically install LSP servers
-    require('mason').setup()
-    require('mason-lspconfig').setup({ automatic_installation = true })
-
     local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
     -- PHP

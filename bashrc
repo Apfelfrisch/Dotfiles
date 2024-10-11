@@ -172,5 +172,8 @@ export NVM_DIR="$HOME/.nvm"
 . "$HOME/.cargo/env"
 # Lando
 export PATH="/home/nils/.lando/bin${PATH+:$PATH}"; #landopath
+
 # Go
-export PATH=$PATH:/usr/local/go/bin
+export GOPATH=~/.local/share/go
+
+export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin

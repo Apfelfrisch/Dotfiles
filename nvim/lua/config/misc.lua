@@ -7,9 +7,3 @@ vim.cmd([[
     autocmd TermOpen * setlocal nospell
   augroup END
 ]])
-
--- Remove whitespace on save
-autocmd('BufWritePre', {
-  pattern = '',
-  command = ":%s/\\s\\+$//e"
-})

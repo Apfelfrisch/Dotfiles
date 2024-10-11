@@ -61,6 +61,9 @@ require("lazy").setup({
   -- Terminal Window.
   { import = 'config.plugins.toggleterm' },
 
+  -- Packagemanger for lsps and linters
+  { import = 'config.plugins.mason' },
+
   -- Language Server Protocol.
   { import = 'config.plugins.lspconfig' },
 
@@ -73,6 +76,9 @@ require("lazy").setup({
   -- Testing helper
   { import = 'config.plugins.vim-test' },
 
+  -- Code Formatter
+  { import = 'config.plugins.conform' },
+
   -- PHP Refactoring Tools
   { import = 'config.plugins.phpactor' },
 
@@ -82,26 +88,14 @@ require("lazy").setup({
   --  Base rust functionallity
   { import = 'config.plugins.rust' },
 
-  -- Better Rust tooling like Lsp-Config / debugger
+  -- Better Rust tooling like Lsp-Config / Debugger
   { import = 'config.plugins.rust-tools' },
-
-  -- Display buffers as tabs.
-  -- { import = 'config.plugins.bufferline' },
-
-  -- Display indentation lines.
-  -- { import = 'config.plugins.indent-blankline' },
-
-  -- Git integration.
-  -- { import = 'config.plugins.gitsigns' },
 
   -- Project Configuration.
   -- { import = 'config.plugins.projectionist' },
 
   -- Add, change, and delete surrounding text.
   -- { 'tpope/vim-surround' },
-
-  -- Useful commands like :Rename and :SudoWrite.
-  --  { 'tpope/vim-eunuch' },
 
   -- Colorize Hex Codes
   -- { import = 'config.plugins.colorizer' },
@@ -117,15 +111,6 @@ require("lazy").setup({
 
   -- Navigate seamlessly between Vim windows and Tmux panes.
   -- { 'christoomey/vim-tmux-navigator' },
-
-  -- Jump to the last location when opening a file.
-  -- { 'farmergreg/vim-lastplace' },
-
-  -- Automatically create parent dirs when saving.
-  -- { 'jessarcher/vim-heritage' },
-
-  -- Text objects for HTML attributes.
-  -- { 'whatyouhide/vim-textobj-xmlattr', dependencies = 'kana/vim-textobj-user'  },
 
   -- Automatically set the working directory to the project root.
   -- { import = 'config.plugins.vim-rooter' },
