@@ -21,7 +21,7 @@ return {
         'prettier',
         'rust-analyzer',
         'tailwindcss-language-server',
-        'vue-language-server',
+        'ts_ls',
       }
     })
     end
