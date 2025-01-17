@@ -156,12 +156,12 @@ alias ssh-backup='ssh -p23 u372278@u372278.your-storagebox.de'
 alias ssh-marketpartner='ssh -t ploi@marketpartner.voltaik-kvs.de "cd marketpartner.voltaik-kvs.de; bash"'
 alias ssh-voltaik-check='ssh -t ploi@voltaik-check.voltaik-kvs.de "cd voltaik-check.voltaik-kvs.de; bash"'
 
-alias sshfs-web='sshfs forge@web.pro-ebs.de:web.pro-ebs.de/current/ /home/nils/Share/Kvs/ && cd /home/nils/Share/Kvs/'
 alias sshfs-iba='sshfs forge@ibaenergie.pro-ebs.de:ibaenergie.pro-ebs.de/current/ /home/nils/Share/Kvs/ && cd /home/nils/Share/Kvs/'
+alias sshfs-iba-gas='sshfs forge@ibaenergie-gas.pro-ebs.de:ibaenergie-gas.pro-ebs.de/current/ /home/nils/Share/Kvs/ && cd /home/nils/Share/Kvs/'
 alias sshfs-scharr='sshfs forge@scharrwaerme.pro-ebs.de:scharrwaerme.pro-ebs.de/current/ /home/nils/Share/Kvs/ && cd /home/nils/Share/Kvs/'
 alias sshfs-scharr-strom='sshfs forge@scharrwaerme-strom.pro-ebs.de:scharrwaerme-strom.pro-ebs.de/current/ /home/nils/Share/Kvs/ && cd /home/nils/Share/Kvs/'
-alias sshfs-iba-gas='sshfs forge@ibaenergie-gas.pro-ebs.de:ibaenergie-gas.pro-ebs.de/current/ /home/nils/Share/Kvs/ && cd /home/nils/Share/Kvs/'
 alias sshfs-proengeno='sshfs forge@proengeno.pro-ebs.de:proengeno.pro-ebs.de/current/ /home/nils/Share/Kvs/ && cd /home/nils/Share/Kvs/'
+alias sshfs-zh-notify='sshfs ploi@voltaik-check.voltaik-kvs.de:/home/ploi/zh-notify /home/nils/Share/zh-notify/'
 
 PATH=$PATH:~/.config/composer/vendor/bin
 

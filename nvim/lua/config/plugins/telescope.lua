@@ -7,7 +7,6 @@ return {
     { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
   },
   keys = {
-    { '<C-p>', function() require('telescope.builtin').find_files() end },
     { '<leader>ff', function() require('telescope.builtin').find_files() end },
     { '<leader>fg', function() require('telescope').extensions.live_grep_args.live_grep_args() end },
     { '<leader>fk', function() require('telescope.builtin').keymaps() end },
