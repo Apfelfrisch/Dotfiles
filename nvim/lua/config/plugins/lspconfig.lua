@@ -23,7 +23,8 @@ return {
         --   vim.lsp.buf.inlay_hint(bufnr, true)
         -- end
       end,
-      capabilities = capabilities
+      capabilities = capabilities,
+      filetypes = { 'php', 'blade' },
     })
 
     -- Typescript

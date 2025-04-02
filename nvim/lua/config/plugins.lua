@@ -83,7 +83,7 @@ require("lazy").setup({
   { import = 'config.plugins.phpactor' },
 
   -- Syntax for Blade files
-  { import = 'config.plugins.vim-blade' },
+  { 'alexandersix/vim-blade'},
 
   --  Base rust functionallity
   { import = 'config.plugins.rust' },
