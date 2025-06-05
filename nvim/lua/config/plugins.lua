@@ -49,10 +49,6 @@ require("lazy").setup({
   -- A Status line.
   { import = 'config.plugins.lualine' },
 
-  -- All closing buffers without closing the slit window.
-   { import = 'config.plugins.bufdelete' },
-
-  -- All closing buffers without closing the split window.
   { import = 'config.plugins.bufexplorer' },
 
   -- Git commands.
@@ -90,6 +86,9 @@ require("lazy").setup({
 
   -- Better Rust tooling like Lsp-Config / Debugger
   { import = 'config.plugins.rust-tools' },
+
+  -- All closing buffers without closing the slit window.
+   -- { import = 'config.plugins.bufdelete' },
 
   -- Project Configuration.
   -- { import = 'config.plugins.projectionist' },
