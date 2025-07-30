@@ -7,12 +7,24 @@ return {
     { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
   },
   keys = {
+    -- Find Files
     { '<leader>ff', function() require('telescope.builtin').find_files() end },
+    -- Find grep
     { '<leader>fg', function() require('telescope').extensions.live_grep_args.live_grep_args() end },
+    -- Find keymaps
     { '<leader>fk', function() require('telescope.builtin').keymaps() end },
+    -- Find Files
     { '<leader>fF', function() require('telescope.builtin').find_files({ no_ignore = true, prompt_title = 'All Files' }) end },
+    -- Find history
     { '<leader>fh', function() require('telescope.builtin').oldfiles() end },
+    -- Find symboles
     { '<leader>fs', function() require('telescope.builtin').lsp_document_symbols() end },
+    -- Find Files under cursor
+    { '<leader>fu', function()
+      local filename = vim.fn.expand("<cfile>")
+        require('telescope.builtin').find_files({ default_text = filename })
+      end,
+    },
   },
   config = function ()
     local actions = require('telescope.actions')
