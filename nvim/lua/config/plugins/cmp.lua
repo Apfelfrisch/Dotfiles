@@ -17,13 +17,7 @@ return {
     local lspkind = require('lspkind')
 
     require('luasnip/loaders/from_snipmate').lazy_load()
-    require('crates').setup {
-        completion = {
-            cmp = {
-                enabled = true,
-            },
-        },
-    }
+    require('crates').setup()
 
     local has_words_before = function()
       local line, col = unpack(vim.api.nvim_win_get_cursor(0))
