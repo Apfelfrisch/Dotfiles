@@ -8,11 +8,12 @@ return {
 		local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 		-- PHP
-		require("lspconfig").intelephense.setup({
+		vim.lsp.config("intelephense", {
 			commands = {
 				IntelephenseIndex = {
 					function()
-						vim.lsp.buf.execute_command({ command = "intelephense.index.workspace" })
+						vim.lsp.commands["intelephense.index.workspace"]()
+						-- vim.lsp.buf.execute_command({ command = "intelephense.index.workspace" })
 					end,
 				},
 			},
@@ -28,9 +29,7 @@ return {
 		})
 
 		-- Typescript
-		require("lspconfig").ts_ls.setup({
-			on_attach = on_attach,
-			flags = lsp_flags,
+		vim.lsp.config("ts_ls", {
 			settings = {
 				completions = {
 					completeFunctionCalls = true,
@@ -39,7 +38,7 @@ return {
 		})
 
 		-- Golang
-		require("lspconfig").gopls.setup({
+		vim.lsp.config("gopls", {
 			settings = {
 				gopls = {
 					analyses = {
@@ -53,7 +52,7 @@ return {
 			filetypes = { "go", "gomod", "gowork", "gotmpl" },
 		})
 
-		-- require('lspconfig').phpactor.setup({
+		-- vim.lsp.config("phpactor", {
 		--   capabilities = capabilities,
 		--   on_attach = function(client, bufnr)
 		--     client.server_capabilities.completionProvider = false
@@ -81,14 +80,28 @@ return {
 		-- })
 
 		-- Tailwind CSS
-		require("lspconfig").tailwindcss.setup({ capabilities = capabilities })
+		vim.lsp.config("tailwindcss", { capabilities = capabilities })
 
 		-- JSON
-		require("lspconfig").jsonls.setup({
+		vim.lsp.config("jsonls", {
 			capabilities = capabilities,
 			settings = {
 				json = {
 					schemas = require("schemastore").json.schemas(),
+				},
+			},
+		})
+
+		vim.lsp.config("lua_ls", {
+			settings = {
+				Lua = {
+					diagnostics = {
+						globals = { "vim" },
+					},
+					workspace = {
+						library = vim.api.nvim_get_runtime_file("", true),
+					},
+					telemetry = { enable = false },
 				},
 			},
 		})
