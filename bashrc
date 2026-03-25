@@ -177,3 +177,5 @@ export PATH="/home/nils/.lando/bin${PATH+:$PATH}"; #landopath
 export GOPATH=~/.local/share/go
 
 export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
+
+alias claude="claude --effort max"
