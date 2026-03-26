@@ -2,6 +2,9 @@
 
 DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
+#Ghostty
+snap install ghostty --classic
+
 # Bash
 rm -rf $HOME/.bashrc
 ln -s $DOTFILES/bashrc $HOME/.bashrc
