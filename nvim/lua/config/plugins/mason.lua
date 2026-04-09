@@ -12,6 +12,7 @@ return {
 			run_on_start = true,
 			ensure_installed = {
 				"eslint_d",
+				"oxfmt",
 				"goimports",
 				"gopls",
 				"intelephense",

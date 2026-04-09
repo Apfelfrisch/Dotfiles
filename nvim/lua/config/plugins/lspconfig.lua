@@ -7,6 +7,18 @@ return {
 	config = function()
 		local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
+		-- Fix "workspace URI is not a valid file path: file://." errors.
+		-- Some LSP configs (e.g. rust_analyzer) can produce a relative "." as root_dir
+		-- when no project root is found. Patch the conversion point so relative paths
+		-- are resolved to absolute before being turned into URIs.
+		local orig_get_wf = vim.lsp._get_workspace_folders
+		vim.lsp._get_workspace_folders = function(workspace_folders)
+			if type(workspace_folders) == "string" and not workspace_folders:match("^/") then
+				workspace_folders = vim.fn.fnamemodify(workspace_folders, ":p"):gsub("/$", "")
+			end
+			return orig_get_wf(workspace_folders)
+		end
+
 		-- PHP
 		vim.lsp.config("intelephense", {
 			commands = {

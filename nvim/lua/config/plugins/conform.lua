@@ -6,9 +6,9 @@ return {
 		-- Define your formatters
 		formatters_by_ft = {
 			lua = { "stylua" },
-			javascript = { "vp_fmt", "prettier", stop_after_first = true },
-			typescript = { "vp_fmt", "prettier", stop_after_first = true },
-			typescriptreact = { "vp_fmt", "prettier", stop_after_first = true },
+			javascript = { "oxfmt", "prettier", stop_after_first = true },
+			typescript = { "oxfmt", "prettier", stop_after_first = true },
+			typescriptreact = { "oxfmt", "prettier", stop_after_first = true },
 			rust = { "rustfmt", lsp_format = "fallback" },
 			go = { "goimports", "gofmt" },
 			php = { "php-cs-fixer" },
@@ -18,11 +18,6 @@ return {
 		},
 
 		formatters = {
-			vp_fmt = {
-				command = "./node_modules/.bin/oxfmt",
-				args = { "--stdin-filepath", "$FILENAME" },
-				stdin = true,
-			},
 			["php-cs-fixer"] = {
 				command = "php-cs-fixer",
 				args = {
@@ -40,7 +35,7 @@ return {
 		},
 
 		-- Set up format-on-save
-		format_on_save = { timeout_ms = 500 },
+		format_on_save = { timeout_ms = 2000 },
 	},
 	init = function()
 		--

@@ -2,8 +2,19 @@
 
 DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-#Ghostty
+# Dependencies
+if ! command -v go &> /dev/null; then
+  sudo snap install go --classic
+fi
+
+if ! command -v cargo &> /dev/null; then
+  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+  source "$HOME/.cargo/env"
+fi
+
+# Programs
 snap install ghostty --classic
+cargo install tree-sitter-cli
 
 # Bash
 rm -rf $HOME/.bashrc
