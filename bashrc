@@ -134,6 +134,7 @@ php-xdebug() {
     (php -d xdebug.start_with_request=yes "${@}")
 }
 
+alias vim='nvim'
 alias tu='vendor/bin/phpunit --testsuite=Unit'
 alias sshfs='sshfs -o follow_symlinks'
 alias phpstan='./vendor/bin/phpstan'
@@ -153,7 +154,7 @@ alias ssh-scharr='ssh -t forge@scharrwaerme.pro-ebs.de "cd scharrwaerme.pro-ebs.
 alias ssh-scharr-strom='ssh -t forge@scharrwaerme-strom.pro-ebs.de "cd scharrwaerme-strom.pro-ebs.de/current; bash"'
 alias ssh-proengeno='ssh -t forge@proengeno.pro-ebs.de "cd proengeno.pro-ebs.de/current; bash"'
 alias ssh-backup='ssh -p23 u372278@u372278.your-storagebox.de'
-alias ssh-marketpartner='ssh -t ploi@marketpartner.voltaik-kvs.de "cd marketpartner.voltaik-kvs.de; bash"'
+alias ssh-marketpartner='ssh -t ploi@marketpartner.friesen-maschine.de "cd marketpartner.friesen-maschine.de; bash"'
 alias ssh-voltaik-check='ssh -t ploi@voltaik-check.voltaik-kvs.de "cd voltaik-check.voltaik-kvs.de; bash"'
 alias ssh-vpn='ssh root@49.13.146.83'
 alias ssh-friesenwerk='ssh -t ploi@kvs.friesen-maschine.de "cd kvs.friesen-maschine.de; bash"'
@@ -164,8 +165,6 @@ alias sshfs-scharr='sshfs forge@scharrwaerme.pro-ebs.de:scharrwaerme.pro-ebs.de/
 alias sshfs-scharr-strom='sshfs forge@scharrwaerme-strom.pro-ebs.de:scharrwaerme-strom.pro-ebs.de/current/ /home/nils/Share/Kvs/ && cd /home/nils/Share/Kvs/'
 alias sshfs-proengeno='sshfs forge@proengeno.pro-ebs.de:proengeno.pro-ebs.de/current/ /home/nils/Share/Kvs/ && cd /home/nils/Share/Kvs/'
 alias sshfs-zh-notify='sshfs ploi@voltaik-check.voltaik-kvs.de:/home/ploi/zh-notify /home/nils/Share/zh-notify/'
-
-alias claude="claude --effort max"
 
 PATH=$PATH:~/.config/composer/vendor/bin
 
