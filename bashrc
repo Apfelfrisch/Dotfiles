@@ -158,6 +158,7 @@ alias ssh-marketpartner='ssh -t ploi@marketpartner.friesen-maschine.de "cd marke
 alias ssh-voltaik-check='ssh -t ploi@voltaik-check.voltaik-kvs.de "cd voltaik-check.voltaik-kvs.de; bash"'
 alias ssh-vpn='ssh root@49.13.146.83'
 alias ssh-friesenwerk='ssh -t ploi@kvs.friesen-maschine.de "cd kvs.friesen-maschine.de; bash"'
+alias ssh-friesen-werk-de='ssh -t ploi@friesen-werk.de "cd friesen-werk.de; bash"'
 
 alias sshfs-iba='sshfs forge@ibaenergie.pro-ebs.de:ibaenergie.pro-ebs.de/current/ /home/nils/Share/Kvs/ && cd /home/nils/Share/Kvs/'
 alias sshfs-iba-gas='sshfs forge@ibaenergie-gas.pro-ebs.de:ibaenergie-gas.pro-ebs.de/current/ /home/nils/Share/Kvs/ && cd /home/nils/Share/Kvs/'
@@ -165,6 +166,7 @@ alias sshfs-scharr='sshfs forge@scharrwaerme.pro-ebs.de:scharrwaerme.pro-ebs.de/
 alias sshfs-scharr-strom='sshfs forge@scharrwaerme-strom.pro-ebs.de:scharrwaerme-strom.pro-ebs.de/current/ /home/nils/Share/Kvs/ && cd /home/nils/Share/Kvs/'
 alias sshfs-proengeno='sshfs forge@proengeno.pro-ebs.de:proengeno.pro-ebs.de/current/ /home/nils/Share/Kvs/ && cd /home/nils/Share/Kvs/'
 alias sshfs-zh-notify='sshfs ploi@voltaik-check.voltaik-kvs.de:/home/ploi/zh-notify /home/nils/Share/zh-notify/'
+alias sshfs-friesen-werk-de='sshfs ploi@friesen-werk.de:/home/ploi/friesen-werk.de/ /home/nils/Share/friesen-werk.de/'
 
 PATH=$PATH:~/.config/composer/vendor/bin
 

@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm list:*)",
+      "Bash(npx oxfmt:*)",
+      "Read(//home/nils/Code/Pebs/**)",
+      "Bash(./node_modules/.bin/oxfmt --version)",
+      "Bash(~/Code/Pebs/node_modules/.bin/oxfmt --stdin-filepath test.ts)",
+      "Bash(timeout 2 ./node_modules/.bin/oxfmt --stdin-filepath modules/Edifact/Resources/js/lib/utilmd-description.ts)",
+      "Bash(echo \"exit: $?\")",
+      "Bash(~/.local/share/nvim/mason/bin/oxfmt --version)",
+      "Bash(~/.local/share/nvim/mason/bin/prettier:*)",
+      "Bash(nvim --headless -c \"lua local r = require\\('mason-registry'\\); r.refresh\\(\\); vim.print\\(r.has_package\\('oxfmt'\\)\\); vim.cmd\\('qa'\\)\")",
+      "Read(//home/nils/.local/share/nvim/**)",
+      "Bash(~/.local/share/nvim/mason/bin/oxfmt --stdin-filepath test.ts)",
+      "Bash(~/.local/share/nvim/mason/bin/oxfmt --stdin-filepath modules/Edifact/Resources/js/lib/utilmd-description.ts)",
+      "Bash(nvim:*)",
+      "Bash(~/.local/share/nvim/mason/bin/oxfmt:*)",
+      "Bash(find nvim:*)",
+      "Bash(find:*)"
+    ]
+  }
+}
