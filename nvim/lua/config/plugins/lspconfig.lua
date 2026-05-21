@@ -119,9 +119,13 @@ return {
 		})
 
 		-- Keymaps
-		vim.keymap.set("n", "<Leader>d", "<cmd>lua vim.diagnostic.open_float()<CR>")
-		vim.keymap.set("n", "[d", "<cmd>lua vim.diagnostic.goto_prev()<CR>")
-		vim.keymap.set("n", "]d", "<cmd>lua vim.diagnostic.goto_next()<CR>")
+		vim.keymap.set("n", "<Leader>d", vim.diagnostic.open_float)
+		vim.keymap.set("n", "[d", function()
+			vim.diagnostic.jump({ count = -1, on_jump = function() vim.diagnostic.open_float() end })
+		end)
+		vim.keymap.set("n", "]d", function()
+			vim.diagnostic.jump({ count = 1, on_jump = function() vim.diagnostic.open_float() end })
+		end)
 		vim.keymap.set("n", "gd", ":Telescope lsp_definitions<CR>")
 		vim.keymap.set("n", "ga", "<cmd>lua vim.lsp.buf.code_action()<CR>")
 		vim.keymap.set("n", "gi", ":Telescope lsp_implementations<CR>")
