@@ -35,3 +35,12 @@ ln -s $DOTFILES/git $HOME/.config/git
 # sudo apt install build-essential
 rm -rf $HOME/.config/nvim
 ln -s $DOTFILES/nvim $HOME/.config/nvim
+
+# Claude Code
+# ~/.claude also holds runtime state (sessions, history, credentials),
+# so symlink only the config we track instead of the whole directory.
+mkdir -p $HOME/.claude
+rm -f $HOME/.claude/settings.json
+ln -s $DOTFILES/claude/settings.json $HOME/.claude/settings.json
+rm -rf $HOME/.claude/skills
+ln -s $DOTFILES/claude/skills $HOME/.claude/skills
