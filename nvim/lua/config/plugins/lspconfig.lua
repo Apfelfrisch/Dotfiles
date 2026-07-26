@@ -19,26 +19,19 @@ return {
 			return orig_get_wf(workspace_folders)
 		end
 
-		-- PHP
-		vim.lsp.config("intelephense", {
-			commands = {
-				IntelephenseIndex = {
-					function()
-						vim.lsp.commands["intelephense.index.workspace"]()
-						-- vim.lsp.buf.execute_command({ command = "intelephense.index.workspace" })
-					end,
-				},
-			},
+		-- PHP (https://github.com/PHPantom-dev/phpantom_lsp, installed via
+		-- cargo install — not available in Mason or nvim-lspconfig yet)
+		vim.lsp.config("phpantom", {
+			cmd = { "phpantom_lsp" },
+			root_markers = { "composer.json", ".git" },
 			on_attach = function(client, bufnr)
 				client.server_capabilities.documentFormattingProvider = false
 				client.server_capabilities.documentRangeFormattingProvider = false
-				-- if client.server_capabilities.inlayHintProvider then
-				--   vim.lsp.buf.inlay_hint(bufnr, true)
-				-- end
 			end,
 			capabilities = capabilities,
 			filetypes = { "php", "blade" },
 		})
+		vim.lsp.enable("phpantom")
 
 		-- Typescript
 		vim.lsp.config("ts_ls", {

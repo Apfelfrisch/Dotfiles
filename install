@@ -16,6 +16,9 @@ fi
 snap install ghostty --classic
 cargo install tree-sitter-cli
 
+# PHPantom LSP (PHP language server — not in Mason yet)
+cargo install --locked phpantom_lsp
+
 # Bash
 rm -rf $HOME/.bashrc
 ln -s $DOTFILES/bashrc $HOME/.bashrc

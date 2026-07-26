@@ -15,7 +15,6 @@ return {
 				"oxfmt",
 				"goimports",
 				"gopls",
-				"intelephense",
 				"json-lsp",
 				"lua-language-server",
 				"php-cs-fixer",
