@@ -8,10 +8,22 @@
   "permissions": {
     "defaultMode": "auto"
   },
+  "model": "claude-fable-5[1m]",
   "enabledPlugins": {
-    "frontend-design@claude-plugins-official": true
+    "frontend-design@claude-plugins-official": true,
+    "phpantom@phpantom": true,
+    "typescript-lsp@claude-plugins-official": true,
+    "gopls-lsp@claude-plugins-official": true
   },
-  "effortLevel": "xhigh",
+  "extraKnownMarketplaces": {
+    "phpantom": {
+      "source": {
+        "source": "github",
+        "repo": "PHPantom-dev/phpantom_claude"
+      }
+    }
+  },
+  "effortLevel": "high",
   "skipDangerousModePermissionPrompt": true,
   "editorMode": "vim",
   "skipAutoPermissionPrompt": true
