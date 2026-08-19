@@ -142,6 +142,29 @@ alias phpunit='./vendor/bin/phpunit'
 alias dc='docker compose'
 alias dc-up='dc up -d'
 alias ddev-test='ddev php vendor/bin/phpunit'
+
+# Restore a mydumper dump directory into the local DDEV database.
+# Usage: ddev-myloader <dump-dir> [database]  (database defaults to the dir name)
+ddev-myloader() {
+    if [ -z "$1" ]; then
+        echo "Usage: ddev-myloader <dump-dir> [database]" >&2
+        return 1
+    fi
+
+    local dir="${1%/}"
+    local db="${2:-$(basename "$dir")}"
+
+    mysql -h 127.0.0.1 -P 3306 -uroot -proot -e "CREATE DATABASE IF NOT EXISTS \`$db\`" \
+        || return 1
+
+    myloader \
+        --host=127.0.0.1 --port=3306 \
+        --user=root --password=root \
+        --directory="$dir" \
+        --database="$db" \
+        --drop-table \
+        --threads=4
+}
 alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'
 
 alias ssh-web='ssh -t forge@web.pro-ebs.de "cd web.pro-ebs.de/current; bash"'
