@@ -3,12 +3,14 @@
     "CLAUDE_CODE_NO_FLICKER": "1"
   },
   "attribution": {
-    "commit": ""
+    "commit": "",
+    "pr": "",
+    "sessionUrl": false
   },
   "permissions": {
     "defaultMode": "auto"
   },
-  "model": "claude-fable-5[1m]",
+  "model": "fable[1m]",
   "enabledPlugins": {
     "frontend-design@claude-plugins-official": true,
     "phpantom@phpantom": true,
@@ -26,5 +28,38 @@
   "effortLevel": "high",
   "skipDangerousModePermissionPrompt": true,
   "editorMode": "vim",
-  "skipAutoPermissionPrompt": true
+  "verbose": false,
+  "skipAutoPermissionPrompt": true,
+  "autoMode": {
+    "allow": [
+      "$defaults",
+      "Bash(ddev:*) under /home/nils/Code/Pebs \u2014 routine local dev-environment CLI, 171 uses in this project's transcripts, no destructive pattern observed"
+    ],
+    "environment": [
+      "### Org-wide",
+      "**Organization**: KVSystem (GitHub org \u2014 from origin remote github.com:KVSystem/Pebs.git)",
+      "**Cloud provider(s)**: None configured",
+      "**Repository visibility**: assume private unless the remote host and repo name indicate otherwise, or a visibility check in the transcript shows public \u2014 gh visibility check was not queryable here for KVSystem/Pebs",
+      "**Internal sharing / snippet hosting**: None configured \u2014 treat public paste/gist services as outside the trust boundary",
+      "**Secrets management**: None configured",
+      "**Default / protected branches**: Default branch is `master` (repo facts); protected-branch/ruleset status not queryable here via gh",
+      "**CI/CD deploy targets**: None configured",
+      "**Network posture**: None configured",
+      "**Source control**: The trusted repo (github.com:KVSystem/Pebs.git) and its remote(s) only \u2014 no additional orgs configured",
+      "**Trusted internal domains**: None configured",
+      "**Trusted cloud buckets**: None configured",
+      "**Key internal services**: pebs.ddev.site (local dev host, contacted 15\u00d7 in recent transcripts); www.bdew-mako.de (contacted 9\u00d7 in recent transcripts)",
+      "**Internal package registry**: None configured",
+      "**Sensitive data locations & audiences**: any file or store holding personal data, confidential business data, credentials, regulated data, or similarly sensitive material; preserve exact handles when known and share only with audiences cleared at the [named+specifics] bar \u2014 note: .env and modules/CustomerApi/.env.example are tracked as sensitive-looking paths in this repo",
+      "**Data retention / declassification**: None configured",
+      "**Sensitive remote targets**: any namespace, host, or container whose name carries `prod` or `production` as a whole word or name segment (hyphen/underscore/dot-delimited \u2014 e.g. matches `prod-db`, not `producer`)",
+      "**Protected deployment namespaces / environments**: None configured \u2014 fall back to the Sensitive remote targets heuristic",
+      "**Protected IaC scopes**: IAM, RBAC, networking, quota, and node-pool resources; anything whose name or tag carries `prod` or `production` as a whole word or name segment",
+      "### User-specific",
+      "**Primary use of Claude Code**: software development (PHP project, ddev-based local dev, uses composer/php toolchain)",
+      "**Trusted repo**: /home/nils/Code/Pebs (github.com:KVSystem/Pebs.git) \u2014 visibility not confirmed, treat as private by default until confirmed otherwise",
+      "**Org-specific CLIs**: ddev (171\u00d7 in this project's transcripts \u2014 primary dev-environment CLI)",
+      "routine composer/php/vendor/ddev toolchain commands under /home/nils/Code/Pebs are consistent with declared-dependency and toolchain-bootstrap defaults"
+    ]
+  }
 }
