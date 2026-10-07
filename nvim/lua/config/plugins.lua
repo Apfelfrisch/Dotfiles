@@ -75,9 +75,6 @@ require("lazy").setup({
 	-- Code Formatter
 	{ import = "config.plugins.conform" },
 
-	-- CodeCompanion AI Plugin
-	{ import = "config.plugins.codecompanion" },
-
 	-- PHP Refactoring Tools
 	{ import = "config.plugins.phpactor" },
 

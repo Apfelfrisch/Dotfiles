@@ -163,7 +163,8 @@ ddev-myloader() {
         --directory="$dir" \
         --database="$db" \
         --drop-table \
-        --threads=4
+        --threads=4 \
+        --optimize-keys=SKIP
 }
 alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'
 
