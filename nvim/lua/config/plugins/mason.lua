@@ -22,7 +22,6 @@ return {
 				"rust-analyzer",
 				"stylua",
 				"tailwindcss-language-server",
-				"ts_ls",
 			},
 		})
 	end,

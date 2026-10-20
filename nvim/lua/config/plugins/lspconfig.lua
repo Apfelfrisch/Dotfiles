@@ -34,13 +34,8 @@ return {
 		vim.lsp.enable("phpantom")
 
 		-- Typescript
-		vim.lsp.config("ts_ls", {
-			settings = {
-				completions = {
-					completeFunctionCalls = true,
-				},
-			},
-		})
+		vim.lsp.config("tsc", { capabilities = capabilities })
+		vim.lsp.enable("tsc")
 
 		-- Golang
 		vim.lsp.config("gopls", {
