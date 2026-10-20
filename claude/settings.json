@@ -67,5 +67,6 @@
       "**Org-specific CLIs**: ddev (171× in this project's transcripts — primary dev-environment CLI)",
       "routine composer/php/vendor/ddev toolchain commands under /home/nils/Code/Pebs are consistent with declared-dependency and toolchain-bootstrap defaults"
     ]
-  }
+  },
+  "hooks": {"SessionStart":[{"matcher":"^(startup|resume|clear|compact|fork)$","hooks":[{"type":"command","command":"bash '/home/nils/.claude/hooks/herdr-agent-state.sh' session","timeout":10}]}]}
 }

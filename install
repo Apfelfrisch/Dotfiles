@@ -16,6 +16,10 @@ fi
 snap install ghostty --classic
 cargo install tree-sitter-cli
 
+if ! command -v herdr &> /dev/null; then
+  curl -fsSL https://herdr.dev/install.sh | sh
+fi
+
 # PHPantom LSP (PHP language server — not in Mason yet)
 cargo install --locked phpantom_lsp
 
@@ -30,6 +34,12 @@ ln -s $DOTFILES/fonts $HOME/.local/share/fonts
 # Git
 rm -rf $HOME/.config/git
 ln -s $DOTFILES/git $HOME/.config/git
+
+# Herdr
+# ~/.config/herdr also holds logs, so symlink only the config file.
+mkdir -p $HOME/.config/herdr
+rm -f $HOME/.config/herdr/config.toml
+ln -s $DOTFILES/herdr/config.toml $HOME/.config/herdr/config.toml
 
 # Neovim
 # sudo snap install nvim --clasic
